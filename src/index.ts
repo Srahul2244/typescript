@@ -17,7 +17,7 @@ let userType: "super-admin" | "admin" | "user"
 
 let value: number | string | boolean | null
 
-let arr1:(string|boolean)[]=['Bangalore',true]
+let arr1: (string | boolean)[] = ['Bangalore', true]
 
 // type
 
@@ -95,6 +95,10 @@ type company = {
     age: number,
     rank?: number
 }
+type profession = {
+    role: string,
+    salary: number
+}
 
 let arrOfObj: company[] = [{ name: 'Bangalore', age: 1, rank: 2 }]
 
@@ -139,3 +143,12 @@ function masa({ name, age }: company): void {
     console.log(name + "" + age)
 }
 masa(masai)
+
+// intersection 
+
+let masaischool: (company & profession)[] = [{
+    name: "rahul",
+    age: 20,
+    role: "web developer",
+    salary: 2000000
+}]
